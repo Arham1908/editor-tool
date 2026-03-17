@@ -1,11 +1,27 @@
 import streamlit as st
 from PIL import Image, ImageOps, ImageEnhance, ImageFilter, ImageDraw
 import io
+from PIL import Image
 
-st.set_page_config(page_title="Image Editor", layout="wide")
 
-st.title("Image Editing Application")
-st.write("Upload or capture an image and apply transformations.")
+# --- Load Logo ---
+logo = Image.open("logo.png")
+
+# --- Top Layout with Columns ---
+col1, col2 = st.columns([1, 4])  # Adjust ratio for spacing
+
+with col1:
+    st.image(logo, width=250)  
+
+with col2:
+    st.markdown(
+        "<h1 style='margin-bottom:0; color:#333;'>Image Editing Application</h1>",
+        unsafe_allow_html=True
+    )
+    st.markdown(
+        "<p style='margin-top:0; color:#666; font-size:18px;'>Advanced Image Processing Tool</p>",
+        unsafe_allow_html=True
+    )
 
 # --- INPUT SOURCE ---
 st.sidebar.title("Input Source")
