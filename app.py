@@ -8,18 +8,18 @@ from PIL import Image
 logo = Image.open("logo.png")
 
 # --- Top Layout with Columns ---
-col1, col2 = st.columns([1, 4])  # Adjust ratio for spacing
+col1, col2 = st.columns([1.5, 4])   # Adjust ratio for spacing
 
 with col1:
     st.image(logo, width=250)  
 
 with col2:
     st.markdown(
-        "<h1 style='margin-bottom:0; color:#333;'>Image Editing Application</h1>",
+        "<h1 style='margin-bottom:0; color:#333; line-height:1;'>Image Editing Application</h1>",
         unsafe_allow_html=True
     )
     st.markdown(
-        "<p style='margin-top:0; color:#666; font-size:18px;'>Advanced Image Processing Tool</p>",
+        "<p style='margin-top:0; color:#666; font-size:18px; line-height:1;'>Advanced Image Processing Tool</p>",
         unsafe_allow_html=True
     )
 
